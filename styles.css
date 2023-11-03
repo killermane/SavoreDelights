@@ -8,7 +8,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: black;
+    background-color: dimgray;
     color: black;
     padding: 20px;
 
@@ -68,7 +68,7 @@ nav {
 
 /* Main Content */
 .main-content {
-    background: #dc143c;
+    background: gray;
     padding: 20px;
     margin-top: 40px; /* Space for fixed header */
     border-radius: 8px;
@@ -85,12 +85,15 @@ nav {
 }
 
 .menu-item {
-    background-color: lightblue;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.2s ease-in-out;
+    flex: 1 0 210px; /* Flex-grow, flex-shrink, flex-basis */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* This will center the content vertically */
+    align-items: center; /* This will center the content horizontally */
+    height: 300px; /* Fixed height, adjust as needed */
+    background-color:gold;
+    border-radius:25px;
+    text-align:center;
 }
 
     .menu-item:hover {
@@ -98,8 +101,11 @@ nav {
     }
 
     .menu-item img {
-        width: 100%;
-        height: auto;
+        width: 100%; /* Full width of the container */
+        height: 200px; /* Fixed height, adjust as needed */
+        object-fit: cover; /* This will cover the area, could also use 'contain' to fit the image within the area without cropping */
+        display: block; /* To remove any extra space below the image */
+        margin: 0 auto; /* Center the image if it's not full width */
     }
 
     .menu-item h3 {
