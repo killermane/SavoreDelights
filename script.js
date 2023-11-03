@@ -56,10 +56,13 @@ function loadMenuItems() {
                 menuItems.forEach(item => {
                     const itemElement = document.createElement('div');
                     itemElement.classList.add('menu-item');
+                    // Make the entire itemElement clickable and open product.php with the item's ID
                     itemElement.innerHTML = `
-                        <h3>${item.name} - $${item.price}</h3>
-                        <p>${item.description}</p>
-                        <img src="${item.image}" alt="${item.name}" style="width: 100px; height: auto;">
+                        <a href="product.php?id=${item.id}" class="menu-item-link">
+                            <h3>${item.name} - $${item.price}</h3>
+                            <p>${item.description}</p>
+                            <img src="${item.image}" alt="${item.name}" style="width: 100px; height: auto;">
+                        </a>
                     `;
                     menuContainer.appendChild(itemElement);
                 });
@@ -71,6 +74,7 @@ function loadMenuItems() {
         console.error('The menu container was not found in the DOM.');
     }
 }
+
 
 // Example function to filter menu items by category
 function filterMenu(category) {
@@ -91,6 +95,7 @@ function setupCategoryButtons() {
 
 // Initialize functions after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
+
     loadMenuItems();
     handleReservationForm();
     setupCategoryButtons();
