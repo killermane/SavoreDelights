@@ -76,6 +76,23 @@ function loadMenuItems() {
 }
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const menuItems = document.querySelectorAll('.menu-item'); // Ensure this selector matches your menu items
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', function () {
+            const itemId = this.dataset.id; // Assuming you're using a data-id attribute
+            if (itemId) {
+                window.location.href = `product.php?id=${itemId}`;
+            } else {
+                console.error('Item ID is undefined');
+            }
+        });
+    });
+});
+
+
+
 // Example function to filter menu items by category
 function filterMenu(category) {
     const menuItems = document.querySelectorAll('.menu-item');
