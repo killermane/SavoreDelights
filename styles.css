@@ -65,6 +65,8 @@ footer {
     border-radius: 5px;
 }
 
+
+
 /* Menu Section */
 .menu-item {
     display: flex;
@@ -73,6 +75,7 @@ footer {
     padding: 1rem;
     background: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align:center;
 
 }
 
@@ -80,24 +83,48 @@ footer {
         border-bottom: 0;
     }
 
-    .menu-item h3 {
-        margin-top: 0;
-
+    .menu-item img {
+        width: 100%; /* Makes the image responsive */
+        height: auto; /* Maintains the aspect ratio */
+        
+        border-radius: 5px; /* Rounds the corners of the images */
     }
 
-    .menu-item img {
-        border-radius: 5%;
-        margin-right: 1rem;
+
+    .menu-item h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 1.2em; /* Adjust the size as needed */
     }
 
     .menu-item p {
-        margin:auto;
-        text-align:center;
+        font-size: 1em;
+        color: #666; /* Adjust the color as needed */
     }
+
 
     .menu-item:hover {
         transform: translateX(2px);
+        outline: 2px solid black; /* Provides a clear outline when the item is focused */
+
     }
+
+.menu-item-link {
+    text-decoration: none; /* Removes the underline from links */
+    color: inherit; /* Keeps the text color consistent with the parent element */
+    display: block; /* Makes the link fill the entire menu item for easier clicking */
+}
+
+    
+
+
+#menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Adjust '200px' to your preferred minimum width */
+    gap: 10px; /* Adjust the gap between items */
+}
+
+
 
 .contact-form {
     max-width: 600px;

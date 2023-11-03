@@ -28,7 +28,8 @@ if (isset($_GET['id'])) {
 
 ?>
 
-<!-- Inside product.php -->
+    <link rel="stylesheet" href="styles.css"> 
+
 <div class="item-details">
     <?php if (isset($item) && $item): // Check if $item is defined and not false ?>
         <h1><?php echo htmlspecialchars($item['name']); ?></h1>
