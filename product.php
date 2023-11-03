@@ -32,8 +32,10 @@ if (isset($_GET['id'])) {
 
 <div class="item-details">
     <?php if (isset($item) && $item): // Check if $item is defined and not false ?>
+    <img src="<?php echo htmlspecialchars($item['image_url']); ?>" alt="<?php echo htmlspecialchars($item['name']); ?>">
         <h1><?php echo htmlspecialchars($item['name']); ?></h1>
         <p><?php echo htmlspecialchars($item['description']); ?></p>
+            
         <!-- Add more details as needed -->
     <?php else: ?>
         <p>Item not found.</p> <!-- Fallback message if $item is not found -->

@@ -1,273 +1,148 @@
-/* General Reset */
+/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-a {
-    text-decoration: none; /* Removes underlines from links */
-}
-
-
-/* General background */
 body {
-    background: #ffffff; /* Light background for the overall body */
-    color: #333333; /* Dark color for text for contrast */
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
     padding: 20px;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 /* Header */
 header {
-    background: ; /* Lighter background for the header */
-    color: #333333; /* Keeping the text color dark for contrast */
-    text-align:center;
+    background: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Navigation Menu */
-nav ul {
-    background: #e7e7e7; /* Light background for the navigation */
-    text-align:center;
-    text-decoration:none;
-    font-size:25px;
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
 
-    nav ul li a {
-        color: #333333; /* Dark text color for links */
+h1 {
+    font-weight: 300;
+    color: #333;
+}
+
+/* Navigation */
+nav {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
     }
 
-        nav ul li a:hover {
-            background: #dcdcdc; /* Slightly darker background on hover */
+        nav ul li {
+            margin: 0 20px;
         }
 
-/* Footer */
-footer {
-    background: #f8f8f8; /* Light background for the footer */
-    color: #333333; /* Dark text color for contrast */
-}
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+            }
 
-/* Update button colors if needed */
-.button {
-    background: #e7e7e7; /* Light background for buttons */
-    color: #333333; /* Dark text color for buttons */
-}
-
-    .button:hover {
-        background: #dcdcdc; /* Slightly darker background on hover */
-    }
-
+                nav ul li a:hover {
+                    color: #ddd;
+                }
 
 /* Main Content */
 .main-content {
-    padding: 20px;
     background: #fff;
-    border-radius: 5px;
+    padding: 20px;
+    margin-top: 40px; /* Space for fixed header */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
-
 
 /* Menu Section */
-.menu-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    text-align:center;
-
+#menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
-    .menu-item:last-child {
-        border-bottom: 0;
+.menu-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+    .menu-item:hover {
+        transform: scale(1.05);
     }
 
     .menu-item img {
-        height: auto; /* Maintains the aspect ratio */
-        display: block; /* Change display to block */
-        width: 500px; /* Or any fixed width */
-        margin: 0 auto; /* Horizontally center the block element */
-        border-radius: 5px; /* Rounds the corners of the images */
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ddd;
     }
 
-
     .menu-item h3 {
-        margin: 0;
-        padding: 0;
-        font-size: 1.2em; /* Adjust the size as needed */
+        margin: 10px 0;
     }
 
     .menu-item p {
-        font-size: 1em;
-        color: #666; /* Adjust the color as needed */
+        padding: 0 10px;
+        border-bottom: 1px solid #ddd;
     }
 
-
-    .menu-item:hover {
-        transform: translateX(2px);
-        outline: 2px solid black; /* Provides a clear outline when the item is focused */
-
-    }
-
-.menu-item-link {
-    text-decoration: none; /* Removes the underline from links */
-    color: inherit; /* Keeps the text color consistent with the parent element */
-    display: block; /* Makes the link fill the entire menu item for easier clicking */
-}
-
-
-
-
-/* Grid example */
-#menu-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 3fr)); /* Adjust '200px' to your preferred minimum width */
-    gap: 10px; /* Space between items */
-    justify-items: center; /* Horizontally center the items */
-    align-items: center; /* Vertically center the items */
-}
-
-.menu-item {
-    margin: 10px;
-    padding: 10px;
-}
-
-
-.contact-form {
-    max-width: 600px;
-    padding: 2rem;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-    margin-top:50px;
-    margin-bottom:50px;
-
-}
-
+/* Contact Section */
 .contact-section {
-    margin-top: 50px;
-    margin-bottom:50px;
-    text-align:center;
-
-}
-
-    .contact-form label {
-        display: block;
-        margin-bottom: 0.5rem;
-        color: #333;
-        font-size: 1rem;
-        text-align:center;
-    }
-
-    .contact-form input[type="text"],
-    .contact-form input[type="email"],
-    .contact-form textarea {
-        width: 100%;
-        padding: 0.8rem;
-        margin-bottom: 1.5rem;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box; /* Makes sure the padding doesn't affect the overall width */
-        transition: border-color 0.3s;
-    }
-
-        .contact-form input[type="text"]:focus,
-        .contact-form input[type="email"]:focus,
-        .contact-form textarea:focus {
-            border-color: #007bff;
-            outline: none; /* Removes the default focus outline */
-        }
-
-    .contact-form textarea {
-        resize: vertical; /* Allows the user to vertically resize the textarea */
-    }
-
-    .contact-form .cta-button {
-        display: block;
-        width: 100%;
-        padding: 1rem;
-        border: none;
-        background: #007bff;
-        color: white;
-        font-size: 1rem;
-        cursor: pointer;
-        border-radius: 4px;
-        transition: background-color 0.3s;
-    }
-
-        .contact-form .cta-button:hover {
-            background-color: #0056b3;
-        }
-
-/* Responsive adjustments */
-@media (max-width: 640px) {
-    .contact-form {
-        padding: 1rem;
-    }
-
-        .contact-form label {
-            font-size: 0.9rem;
-        }
-
-        .contact-form .cta-button {
-            padding: 0.8rem;
-        }
-}
-
-/* Styles for mobile devices */
-@media (max-width: 600px) {
-    .menu-item img {
-        width: 100%; /* Full width on small screens */
-        height: auto;
-        margin: 0 auto; /* Center the image if needed */
-    }
-}
-
-/* Styles for desktops */
-@media (min-width: 601px) {
-    .menu-item img {
-        width: auto; /* Or a fixed width, e.g., 200px */
-        height: auto;
-        margin: 0; /* Adjust margin as needed */
-        display: block; /* Or inline-block, depending on layout */
-    }
-}
-
-@media (max-width: 768px) {
-    .menu-container {
-        flex-direction: column;
-    }
-}
-
-
-
-
-/* Reviews Section */
-.reviews-container {
+    background: #fff;
+    padding: 20px;
     margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.review {
-    opacity: 0;
-    animation: fadeIn 0.5s forwards;
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
+.contact-form button {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-    .review h4 {
-        margin-top: 0;
-    }
-
-    .review p {
-        font-style: italic;
+    .contact-form button:hover {
+        background: #555;
     }
 
 /* Footer */
@@ -276,68 +151,41 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
     footer p {
         margin: 0;
     }
 
-
-/* Define a keyframe animation for fading in */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
     }
 
-    to {
-        opacity: 1;
-    }
-}
-
-/* Apply the animation to menu items */
-.menu-item {
-    animation: fadeIn 1s ease-out;
-}
-
-/* Define a slide-up animation */
-@keyframes slideUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
+    nav ul {
+        flex-direction: column;
     }
 
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+        nav ul li {
+            margin: 10px 0;
+        }
 }
 
-/* Apply the slide-up animation to reviews */
-.review {
-    animation: slideUp 0.5s ease-out;
+/* Product Page */
+.item-details {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Define a pulse animation for buttons */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
+    .item-details h1 {
+        margin-bottom: 10px;
     }
 
-    100% {
-        transform: scale(1);
+    .item-details p {
+        line-height: 1.8;
     }
-}
-
-/* Apply the pulse animation to category buttons on hover */
-.category-btn:hover {
-    animation: pulse 1s infinite;
-}
-
-.menu-item.start-animation, .review.start-animation {
-    animation: fadeIn 1s ease-out;
-}
