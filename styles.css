@@ -30,6 +30,7 @@ header {
 nav ul {
     background: #e7e7e7; /* Light background for the navigation */
     text-align:center;
+    text-decoration:none;
     font-size:25px;
 }
 
@@ -122,12 +123,16 @@ footer {
 /* Grid example */
 #menu-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 3fr)); /* Creates a responsive grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 3fr)); /* Adjust '200px' to your preferred minimum width */
     gap: 10px; /* Space between items */
-    justify-content:center;
-
+    justify-items: center; /* Horizontally center the items */
+    align-items: center; /* Vertically center the items */
 }
 
+.menu-item {
+    margin: 10px;
+    padding: 10px;
+}
 
 
 .contact-form {
@@ -228,6 +233,12 @@ footer {
         height: auto;
         margin: 0; /* Adjust margin as needed */
         display: block; /* Or inline-block, depending on layout */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
     }
 }
 
