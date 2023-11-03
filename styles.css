@@ -21,7 +21,7 @@ body {
 
 /* Header */
 header {
-    background: #f8f8f8; /* Lighter background for the header */
+    background: ; /* Lighter background for the header */
     color: #333333; /* Keeping the text color dark for contrast */
     text-align:center;
 }
@@ -84,9 +84,10 @@ footer {
     }
 
     .menu-item img {
-        width: 100%; /* Makes the image responsive */
         height: auto; /* Maintains the aspect ratio */
-        
+        display: block; /* Change display to block */
+        width: 500px; /* Or any fixed width */
+        margin: 0 auto; /* Horizontally center the block element */
         border-radius: 5px; /* Rounds the corners of the images */
     }
 
@@ -115,13 +116,16 @@ footer {
     display: block; /* Makes the link fill the entire menu item for easier clicking */
 }
 
-    
 
 
+
+/* Grid example */
 #menu-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Adjust '200px' to your preferred minimum width */
-    gap: 10px; /* Adjust the gap between items */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 3fr)); /* Creates a responsive grid layout */
+    gap: 10px; /* Space between items */
+    justify-content:center;
+
 }
 
 
@@ -207,6 +211,26 @@ footer {
             padding: 0.8rem;
         }
 }
+
+/* Styles for mobile devices */
+@media (max-width: 600px) {
+    .menu-item img {
+        width: 100%; /* Full width on small screens */
+        height: auto;
+        margin: 0 auto; /* Center the image if needed */
+    }
+}
+
+/* Styles for desktops */
+@media (min-width: 601px) {
+    .menu-item img {
+        width: auto; /* Or a fixed width, e.g., 200px */
+        height: auto;
+        margin: 0; /* Adjust margin as needed */
+        display: block; /* Or inline-block, depending on layout */
+    }
+}
+
 
 
 
