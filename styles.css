@@ -3,13 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif; /* Using 'Open Sans' font for a modern look */
 }
 
 body {
-    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9; /* Light grey background for a subtle look */
-    color: #333; /* Dark grey text for better readability */
+    background-color: #f9f9f9;
+    color: #333;
     padding: 20px;
 }
 
@@ -24,6 +24,10 @@ header {
     padding: 20px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     text-align: center;
+}
+
+header img {
+    box-shadow: 1.5px 1.5px 20px 2px gray;
 }
 
 .container {
@@ -78,15 +82,16 @@ nav {
 #menu-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 50px; /* Increased gap between items */
 }
 
 .menu-item {
-    background-color: #ffffff; /* White background for each menu item */
-    border-radius: 25px;
+    background-color: #ffffff;
+    border-radius: 15px;
     text-align: center;
-    box-shadow:1.5px 3px 10px 1px gray;
-
+    box-shadow: 1.5px 3px 10px 1px gray;
+    padding: 20px; /* Added padding for better spacing */
+    margin-bottom: 20px; /* Increased space at the bottom of each item */
 }
 
     .menu-item:hover {
@@ -176,6 +181,17 @@ footer {
         nav ul li {
             margin: 10px 0;
         }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    #menu-container {
+        gap: 20px; /* Adjust gap for smaller screens */
+    }
 }
 
 /* Product Page */
