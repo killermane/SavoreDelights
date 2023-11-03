@@ -17,13 +17,24 @@ try {
 } catch (\PDOException $e) {
      throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
+
+// Check if the 'id' GET parameter is set
+if (isset($_GET['id'])) {
+    $itemId = $_GET['id'];
+    $stmt = $pdo->prepare("SELECT * FROM menu_items WHERE id = ?");
+    $stmt->execute([$itemId]);
+    $item = $stmt->fetch();
+}
+
 ?>
 
-
-
-<!-- Inside product.html -->
+<!-- Inside product.php -->
 <div class="item-details">
-    <h1><?php echo htmlspecialchars($item['name']); ?></h1>
-    <p><?php echo htmlspecialchars($item['description']); ?></p>
-    <!-- Add more details as needed -->
+    <?php if (isset($item) && $item): // Check if $item is defined and not false ?>
+        <h1><?php echo htmlspecialchars($item['name']); ?></h1>
+        <p><?php echo htmlspecialchars($item['description']); ?></p>
+        <!-- Add more details as needed -->
+    <?php else: ?>
+        <p>Item not found.</p> <!-- Fallback message if $item is not found -->
+    <?php endif; ?>
 </div>
