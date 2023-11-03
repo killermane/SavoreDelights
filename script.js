@@ -20,7 +20,7 @@ function loadMenuItems() {
 
 // Function to handle reservation form submission
 function handleReservationForm() {
-    const form = document.getElementById('form-container');
+    const form = document.getElementById('reservation-form');
     form.addEventListener('submit', function (event) {
         event.preventDefault();
 
@@ -41,8 +41,7 @@ function handleReservationForm() {
 
 // Function to load reviews (static data for now)
 function loadReviews() {
-    // This would normally fetch data from a server
-    // For demonstration, we'll create some static reviews
+
     const reviews = [
         {
             name: "Jane Doe",
@@ -66,9 +65,60 @@ function loadReviews() {
     });
 }
 
-// Call the functions to load menu items and reviews when the page loads
+// Example function to filter menu items by category
+function filterMenu(category) {
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+        item.style.display = item.getAttribute('data-category') === category || category === 'all' ? '' : 'none';
+    });
+}
+
+// Event listeners for category buttons
+document.querySelectorAll('.category-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterMenu(btn.getAttribute('data-category'));
+    });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     loadMenuItems();
     handleReservationForm();
     loadReviews();
+});
+
+
+document.getElementById('reservation-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // ... form validation ...
+
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        message: document.getElementById('message').value
+    };
+
+fetch(this.action, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData)
+})
+.then(response => {
+    if (!response.ok) {
+        // Throw an error for non-OK responses to be caught in the catch block
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+})
+.then(data => {
+    // Handle the response data
+    console.log(data);
+})
+.catch(error => {
+    // Handle any errors that occurred during the fetch
+    console.error('There has been a problem with your fetch operation:', error);
+    });
 });
