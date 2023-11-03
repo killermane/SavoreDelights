@@ -5,69 +5,58 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none; /* Removes underlines from links */
+}
+
+
+/* General background */
 body {
+    background: #ffffff; /* Light background for the overall body */
+    color: #333333; /* Dark color for text for contrast */
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background: #f4f4f4;
-    color: #333;
     padding: 20px;
 }
 
-/* Utility Classes */
-.container {
-    max-width: 1100px;
-    margin: auto;
-    overflow: auto;
-    padding: 0 20px;
-}
-
-.button {
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-    .button:hover {
-        background: #555;
-    }
-
 /* Header */
 header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    background: #f8f8f8; /* Lighter background for the header */
+    color: #333333; /* Keeping the text color dark for contrast */
+    text-align:center;
 }
-
-    header h1 {
-        margin: 0;
-    }
 
 /* Navigation Menu */
 nav ul {
-    list-style: none;
-    background: #555;
-    text-align: center;
-    padding: 0;
+    background: #e7e7e7; /* Light background for the navigation */
+    text-align:center;
+    font-size:25px;
 }
 
-    nav ul li {
-        display: inline;
+    nav ul li a {
+        color: #333333; /* Dark text color for links */
     }
 
-        nav ul li a {
-            color: #fff;
-            padding: 15px 20px;
-            display: inline-block;
+        nav ul li a:hover {
+            background: #dcdcdc; /* Slightly darker background on hover */
         }
 
-            nav ul li a:hover {
-                background: #333;
-            }
+/* Footer */
+footer {
+    background: #f8f8f8; /* Light background for the footer */
+    color: #333333; /* Dark text color for contrast */
+}
+
+/* Update button colors if needed */
+.button {
+    background: #e7e7e7; /* Light background for buttons */
+    color: #333333; /* Dark text color for buttons */
+}
+
+    .button:hover {
+        background: #dcdcdc; /* Slightly darker background on hover */
+    }
+
 
 /* Main Content */
 .main-content {
