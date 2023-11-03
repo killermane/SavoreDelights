@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Eggs Benedict",
+    "description": "Poached eggs with hollandaise sauce on English muffins",
+    "price": 8.99,
+    "category": "breakfast",
+    "image": "img/eggs_benedict.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Caesar Salad",
+    "description": "Crisp romaine lettuce with parmesan and croutons",
+    "price": 10.99,
+    "category": "lunch",
+    "image": "img/ceaser_salad.png"
+  }
+]

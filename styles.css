@@ -1,0 +1,165 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: auto;
+    padding: 0 20px;
+}
+
+.button {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .button:hover {
+        background: #555;
+    }
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+    header h1 {
+        margin: 0;
+    }
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    background: #555;
+    text-align: center;
+    padding: 0;
+}
+
+    nav ul li {
+        display: inline;
+    }
+
+        nav ul li a {
+            color: #fff;
+            padding: 15px 20px;
+            display: inline-block;
+        }
+
+            nav ul li a:hover {
+                background: #333;
+            }
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+/* Menu Section */
+.menu-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+    .menu-item:last-child {
+        border-bottom: 0;
+    }
+
+    .menu-item h3 {
+        margin-top: 0;
+    }
+
+    .menu-item img {
+        max-width: 100px;
+        border-radius: 5px;
+        margin-right: 15px;
+    }
+
+    .menu-item p {
+        margin: 10px 0;
+    }
+
+/* Reservation Form */
+#reservation-form {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+    #reservation-form label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    #reservation-form input[type='text'],
+    #reservation-form input[type='date'],
+    #reservation-form input[type='time'],
+    #reservation-form input[type='number'],
+    #reservation-form input[type='submit'] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+
+    #reservation-form input[type='submit'] {
+        background: #333;
+        color: #fff;
+        border: 0;
+    }
+
+/* Reviews Section */
+.reviews-container {
+    margin-top: 20px;
+}
+
+.review {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+    .review h4 {
+        margin-top: 0;
+    }
+
+    .review p {
+        font-style: italic;
+    }
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+    footer p {
+        margin: 0;
+    }
