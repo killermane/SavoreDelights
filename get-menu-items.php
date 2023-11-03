@@ -16,7 +16,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT name, description, price, image FROM menu_items";
+$sql = "SELECT name, description, price, image, id FROM menu_items";
 $result = $conn->query($sql);
 
 $menuItems = [];

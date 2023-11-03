@@ -56,7 +56,6 @@ function loadMenuItems() {
                 menuItems.forEach(item => {
                     const itemElement = document.createElement('div');
                     itemElement.classList.add('menu-item');
-                    // Make the entire itemElement clickable and open product.php with the item's ID
                     itemElement.innerHTML = `
                         <a href="product.php?id=${item.id}" class="menu-item-link">
                             <h3>${item.name} - $${item.price}</h3>
@@ -74,6 +73,7 @@ function loadMenuItems() {
         console.error('The menu container was not found in the DOM.');
     }
 }
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
