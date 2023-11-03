@@ -39,40 +39,6 @@ function handleReservationForm() {
     }
 }
 
-// Function to load reviews from the database
-function loadReviews() {
-    const reviewsContainer = document.getElementById('reviews-container');
-    if (reviewsContainer) {
-        fetch('get-reviews.php')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(reviews => {
-                reviewsContainer.innerHTML = '';
-                reviews.forEach(review => {
-                    if (review.name && review.review) {
-                        const reviewElement = document.createElement('div');
-                        reviewElement.classList.add('review');
-                        reviewElement.innerHTML = `
-                            <h4>${review.name}</h4>
-                            <p>${review.review}</p>
-                        `;
-                        reviewsContainer.appendChild(reviewElement);
-                    } else {
-                        console.error('Review data is missing name or review text:', review);
-                    }
-                });
-            })
-            .catch(error => {
-                console.error('Error loading reviews:', error);
-            });
-    } else {
-        console.error('The reviews container was not found in the DOM.');
-    }
-}
 
 // Function to load menu items from the database
 function loadMenuItems() {
@@ -127,6 +93,5 @@ function setupCategoryButtons() {
 document.addEventListener('DOMContentLoaded', () => {
     loadMenuItems();
     handleReservationForm();
-    loadReviews();
     setupCategoryButtons();
 });
