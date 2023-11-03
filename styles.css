@@ -8,8 +8,8 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: black;
+    color: black;
     padding: 20px;
 
 }
@@ -21,9 +21,11 @@ a {
 
 /* Header */
 header {
-    background: #ffffff;
+    background: black;
     padding: 20px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align:center;
+
 }
 
 .container {
@@ -34,14 +36,14 @@ header {
 
 h1 {
     font-weight: 300;
-    color: #333;
+    color: white;
 }
 
 /* Navigation */
 nav {
     background: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 10px 0
 }
 
     nav ul {
@@ -66,11 +68,12 @@ nav {
 
 /* Main Content */
 .main-content {
-    background: #fff;
+    background: #dc143c;
     padding: 20px;
     margin-top: 40px; /* Space for fixed header */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: mintcream;
 }
 
 /* Menu Section */
@@ -78,10 +81,11 @@ nav {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+
 }
 
 .menu-item {
-    background: #fff;
+    background-color: lightblue;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -96,16 +100,16 @@ nav {
     .menu-item img {
         width: 100%;
         height: auto;
-        border-bottom: 1px solid #ddd;
     }
 
     .menu-item h3 {
         margin: 10px 0;
+        color: black;
     }
 
     .menu-item p {
         padding: 0 10px;
-        border-bottom: 1px solid #ddd;
+        color: black;
     }
 
 /* Contact Section */
@@ -166,6 +170,7 @@ footer {
 
     nav ul {
         flex-direction: column;
+        text-align:center;
     }
 
         nav ul li {
@@ -183,9 +188,13 @@ footer {
 }
 
     .item-details h1 {
-        margin-bottom: 10px;
+        margin-bottom: 10px
     }
 
     .item-details p {
         line-height: 1.8;
     }
+
+.product-image {
+    width: 100%;
+}
