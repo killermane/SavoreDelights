@@ -31,20 +31,21 @@ if (isset($_GET['id'])) {
     <link rel="stylesheet" href="styles.css"> 
 
 
-    <nav>
-        <ul>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="reservations.html">Reservations</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="index.html">Menu</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+    </ul>
+</nav>
 
-    <header>
-        <div class="container">
-            <h1>Welcome to Savore Delights</h1>
-            <img style="width:92px; height="92px" src="img/logo.jpg" />
-        </div>
-    </header>
+<header>
+    <div class="container">
+        <h1>Welcome to Savore Delights</h1>
+            <img style="width: 92px; height: 92px;" src="img/logo.jpg">
+    </div>
+</header>
+
 
 
 

@@ -8,7 +8,7 @@
 
 body {
     line-height: 1.6;
-    background-color: #f9f9f9;
+    background-color: #F7F0E7;
     color: #333;
     padding: 20px;
 }
@@ -38,7 +38,7 @@ header img {
 
 h1 {
     font-weight: 300;
-    color: #333; /* Dark grey to maintain readability */
+    color: #2B4633; 
 }
 
 /* Navigation */
@@ -70,12 +70,12 @@ nav {
 
 /* Main Content */
 .main-content {
-    background: #ffffff; /* White background for the main content */
+    background: #4F6D5E;
     padding: 20px;
     margin-top: 40px; /* Space for fixed header */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    color: #333; /* Dark grey text for main content */
+    color: #2B4633; /* Dark grey text for main content */
 }
 
 /* Menu Section */
@@ -86,7 +86,7 @@ nav {
 }
 
 .menu-item {
-    background-color: #ffffff;
+    background-color: #F7F0E7;
     border-radius: 15px;
     text-align: center;
     box-shadow: 1.5px 3px 10px 1px gray;
@@ -109,12 +109,12 @@ nav {
 
     .menu-item h3 {
         margin: 10px 0;
-        color: #333; /* Dark grey for titles */
+        color: #2B4633; /* Dark grey for titles */
     }
 
     .menu-item p {
         padding: 0 10px;
-        color: #666; /* Lighter grey for descriptions */
+        color: #2B4633; /* Lighter grey for descriptions */
     }
 
 /* Contact Section */
@@ -167,7 +167,7 @@ footer {
         margin: 0;
     }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .container {
         width: 95%;
@@ -181,18 +181,46 @@ footer {
         nav ul li {
             margin: 10px 0;
         }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
 
     #menu-container {
-        gap: 20px; /* Adjust gap for smaller screens */
+        grid-template-columns: 1fr; /* Stack items in one column on small screens */
+        gap: 20px;
+    }
+
+    .menu-item {
+        margin-bottom: 20px; /* Ensure consistent spacing between items */
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea,
+    .contact-form button {
+        width: calc(100% - 20px); /* Adjust width to account for padding */
+    }
+
+    .item-details,
+    .contact-section,
+    footer {
+        padding: 15px; /* Adjust padding for smaller screens */
     }
 }
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 0; /* Reduce padding on very small screens */
+    }
+
+    .main-content,
+    .item-details,
+    .contact-section {
+        margin-top: 20px; /* Reduce margin on top for smaller screens */
+    }
+
+    .menu-item img {
+        height: auto; /* Adjust image height to maintain aspect ratio */
+    }
+}
+
 
 /* Product Page */
 .item-details {
@@ -216,3 +244,39 @@ footer {
 .product-image {
     width: 100%;
 }
+
+/* Product Page Mobile Responsiveness */
+@media (max-width: 768px) {
+    .item-details {
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    .product-image img {
+        width: 100%;
+        height: auto; /* Adjust height to maintain aspect ratio */
+    }
+
+    .item-details h1 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .item-details p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .item-details {
+        padding: 10px;
+    }
+
+        .item-details h1 {
+            font-size: 1.25rem; /* Further adjust font size for very small screens */
+        }
+
+        .item-details p {
+            font-size: 0.875rem; /* Further adjust font size for very small screens */
+        }
+}
+
